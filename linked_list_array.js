@@ -21,7 +21,8 @@ class LinkedList {
 			} else {
 				let nextNode = new Node(i)
 				temp.next = nextNode
-				temp = nextNode
+				temp = temp.next
+			console.log(temp);
 			}
 		}
 		return result
@@ -29,4 +30,4 @@ class LinkedList {
 }
 
 let list = new LinkedList(10);
-console.log(list.list);
+console.log(JSON.stringify(list.list, null, 2));
